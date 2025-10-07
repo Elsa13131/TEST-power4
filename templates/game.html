@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Déclaration HTML5 pour dire au navigateur quel type de document c'est -->
+
+<html lang="fr">
+<!-- Balise racine HTML avec langue française -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Encodage des caractères pour les accents français -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Responsive design pour mobiles/tablettes -->
+    
+    <title>Puissance 4 - Jeu</title>
+    <!-- Titre dans l'onglet du navigateur -->
+    
+    <link rel="stylesheet" href="/assets/game.css">
+    <!-- Lien vers le fichier CSS pour styler cette page -->
+</head>
+
+<body>
+    <h1>Puissance 4</h1>
+    <!-- Titre principal de la page de jeu -->
+    
+    <p id="tour-joueur">Tour du joueur : Rouge</p>
+    <!-- Paragraphe qui affiche à qui c'est le tour (sera modifié par Go) -->
+    
+    <!-- BOUTONS POUR CHOISIR LES COLONNES -->
+    <div class="boutons-colonnes">
+        <!-- Div = conteneur pour grouper les 7 boutons -->
+        
+        <a href="/jouer/1">
+            <!-- Lien vers la route Go qui gère le jeu en colonne 1 -->
+            <button>Col 1</button>
+            <!-- Bouton cliquable pour la colonne 1 -->
+        </a>
+        
+        <a href="/jouer/2">
+            <!-- Lien vers la route Go qui gère le jeu en colonne 2 -->
+            <button>Col 2</button>
+            <!-- Bouton cliquable pour la colonne 2 -->
+        </a>
+        
+        <a href="/jouer/3">
+            <button>Col 3</button>
+        </a>
+        
+        <a href="/jouer/4">
+            <button>Col 4</button>
+        </a>
+        
+        <a href="/jouer/5">
+            <button>Col 5</button>
+        </a>
+        
+        <a href="/jouer/6">
+            <button>Col 6</button>
+        </a>
+        
+        <a href="/jouer/7">
+            <button>Col 7</button>
+        </a>
+    </div>
+    
+    <!-- PLATEAU DE JEU -->
+    <table id="plateau">
+        <!-- Table avec ID pour pouvoir la modifier depuis Go -->
+        
+        <tr>
+            <!-- Ligne 1 (haut du plateau) -->
+            <td id="c1r1" class="case-vide"></td>
+            <!-- Cellule colonne 1, rangée 1, classe vide par défaut -->
+            
+            <td id="c2r1" class="case-vide"></td>
+            <!-- Cellule colonne 2, rangée 1 -->
+            
+            <td id="c3r1" class="case-vide"></td>
+            <td id="c4r1" class="case-vide"></td>
+            <td id="c5r1" class="case-vide"></td>
+            <td id="c6r1" class="case-vide"></td>
+            <td id="c7r1" class="case-vide"></td>
+        </tr>
+        
+        <tr>
+            <!-- Ligne 2 -->
+            <td id="c1r2" class="case-vide"></td>
+            <td id="c2r2" class="case-vide"></td>
+            <td id="c3r2" class="case-vide"></td>
+            <td id="c4r2" class="case-vide"></td>
+            <td id="c5r2" class="case-vide"></td>
+            <td id="c6r2" class="case-vide"></td>
+            <td id="c7r2" class="case-vide"></td>
+        </tr>
+        
+        <tr>
+            <!-- Ligne 3 -->
+            <td id="c1r3" class="case-vide"></td>
+            <td id="c2r3" class="case-vide"></td>
+            <td id="c3r3" class="case-vide"></td>
+            <td id="c4r3" class="case-vide"></td>
+            <td id="c5r3" class="case-vide"></td>
+            <td id="c6r3" class="case-vide"></td>
+            <td id="c7r3" class="case-vide"></td>
+        </tr>
+        
+        <tr>
+            <!-- Ligne 4 -->
+            <td id="c1r4" class="case-vide"></td>
+            <td id="c2r4" class="case-vide"></td>
+            <td id="c3r4" class="case-vide"></td>
+            <td id="c4r4" class="case-vide"></td>
+            <td id="c5r4" class="case-vide"></td>
+            <td id="c6r4" class="case-vide"></td>
+            <td id="c7r4" class="case-vide"></td>
+        </tr>
+        
+        <tr>
+            <!-- Ligne 5 -->
+            <td id="c1r5" class="case-vide"></td>
+            <td id="c2r5" class="case-vide"></td>
+            <td id="c3r5" class="case-vide"></td>
+            <td id="c4r5" class="case-vide"></td>
+            <td id="c5r5" class="case-vide"></td>
+            <td id="c6r5" class="case-vide"></td>
+            <td id="c7r5" class="case-vide"></td>
+        </tr>
+        
+        <tr>
+            <!-- Ligne 6 (bas du plateau) -->
+            <td id="c1r6" class="case-vide"></td>
+            <td id="c2r6" class="case-vide"></td>
+            <td id="c3r6" class="case-vide"></td>
+            <td id="c4r6" class="case-vide"></td>
+            <td id="c5r6" class="case-vide"></td>
+            <td id="c6r6" class="case-vide"></td>
+            <td id="c7r6" class="case-vide"></td>
+        </tr>
+    </table>
+    
+    <div class="actions">
+        <!-- Div pour grouper les actions du jeu -->
+        
+        <a href="/nouveau-jeu">
+            <!-- Lien pour recommencer une partie -->
+            <button>Nouveau Jeu</button>
+            <!-- Bouton pour redémarrer -->
+        </a>
+        
+        <a href="/">
+            <!-- Lien pour retourner à l'accueil -->
+            <button>Retour Accueil</button>
+            <!-- Bouton pour revenir au menu principal -->
+        </a>
+    </div>
+</body>
+</html>
